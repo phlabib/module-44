@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import { FaCrosshairs } from "react-icons/fa";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 const Feature = ({feature}) => {
     return (
         <div>
-            <p>
-                <FaCrosshairst> </FaCrosshairs>
+            <p className='flex items-center items-center gap-4'>
+                <AiFillCheckCircle className='text-green-600 '> </AiFillCheckCircle>
                 {feature}
             </p>
         </div>
