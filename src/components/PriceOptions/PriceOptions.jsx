@@ -1,10 +1,9 @@
+import PriceOption from "../PriceOption/PriceOption";
 
 
 const PriceOptions = () => {
 
-
-    {
-        const  price_options= [
+        const  PriceOptions= [
           {
             "id": "1",
             "name": "Basic Membership",
@@ -48,33 +47,19 @@ const PriceOptions = () => {
               "Special family events"
             ]
           },
-          {
-            "id": "4",
-            "name": "Student Membership",
-            "description": "Discounted rate for students",
-            "price": "$24.99/month",
-            "features": [
-              "Valid student ID required",
-              "Access during non-peak hours",
-              "Basic fitness classes",
-              "Locker room access",
-              "Study area",
-              "Monthly fitness challenges"
-            ]
-          }
         ]
-      }
+      
       
 
 
     return (
-        <div>
-            <h2 className="text-5xl">Best Prices</h2>
-            {
-                PriceOptions.map( option => <PriceOption
-                 key = {option.ic} 
-                option = {option}></PriceOption>)
+        <div className="m-12">
+            <h2 className="text-5xl text-center mb-4">Best Prices</h2>
+           <div className="grid grid-cols-3 gap-6 ">
+           {
+                PriceOptions?.map(option => <PriceOption key={option.id} option={option}></PriceOption>)
             }
+           </div>
         </div>
     );
 };
